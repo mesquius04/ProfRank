@@ -1,0 +1,59 @@
+#background{
+    display: flex;
+    border: 1px solid #9f9f9f;     /* Borde ligero */
+    border-radius: 8px;         /* Bordes redondeados */
+    flex-direction: row;
+    height: 160px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
+    background-color: rgb(215, 215, 215);
+    width: 1200px;
+}
+h2{
+    margin-top: -4px;
+    font-size: 24px;
+}
+p{
+    margin-top: -4px;
+}
+#profileimg{
+    width: 160px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+}
+#info{
+    width: 820px;
+    padding: 20px;
+    display: flex;              /* Flexbox para contenido dentro de la tarjeta */
+    flex-direction: column;     /* Contenido en columna dentro de la tarjeta */
+}
+#score{
+    font-size: 14px;
+    padding: 12px;
+    width: 120px;
+    display: flex;
+    background-color: rgb(190, 190, 190);
+    flex-direction: column;
+    margin-left: 60px;
+    border: 2px solid #3e3e3e;     /* Borde ligero */
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#points{
+    margin-top: 26px;
+    margin-right: 8px;
+    text-align: center;
+    font-size: 44px;
+}
+#details{
+    display: flex;
+    flex-direction: row;
+
+}
+.a{
+    color: black;
+    margin-right: 20px;
+}
