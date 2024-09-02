@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
     email: String,
     speciality: String,
     puntuation: Number,
-    lvl: Number,
+    lvl: String,
     profileImg: String, 
     treat: Number,
     location: String,
