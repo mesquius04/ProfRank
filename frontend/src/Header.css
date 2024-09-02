@@ -1,27 +1,41 @@
-header {
-    background-color: #333;
-    padding: 10px;
+  /* Header.css */
+  .header {
+    display: flex;  /* Fondo oscuro */
+    padding: 20px;  /* Espaciado alrededor del contenido */
+    justify-content: center;
+    background-color: rgb(220, 180, 150);
   }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+  .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;  /* Centra los elementos horizontalmente */
   }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
+
+.navbar-list {
+  list-style: none;  /* Elimina los puntos de la lista */
+  display: flex;
+  gap: 30px;  /* Espaciado entre los elementos */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  color: rgb(45, 45, 45);  /* Texto blanco */
+  text-decoration: none;  /* Elimina subrayado */
+  font-weight: bold;
+  padding: 10px 15px;  /* Espaciado interno */
+  transition: background-color 0.3s ease;  /* Animación suave al pasar el mouse */
+}
+
+.navbar-link:hover {
+  background-color:  rgb(200, 160, 130);  /* Color de fondo al pasar el mouse */
+  border-radius: 5px;  /* Bordes redondeados al pasar el mouse */
+}
+
+.navbar-link:active {
+  background-color: #777;  /* Color de fondo al hacer clic */
+}
