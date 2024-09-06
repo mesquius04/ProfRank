@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(250, 230, 200);
+  }
+#title{
+    text-align: center; 
+    font-size: 50px;
+}
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 20px;
+}  

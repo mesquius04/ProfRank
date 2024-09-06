@@ -1,0 +1,155 @@
+/* Estilo de las pestañas */
+.tabs {
+  margin-left: 36px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Estilo para cada pestaña */
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* Cambia el color de la pestaña activa */
+.tab.active {
+  color: #6c3a00;
+  border-bottom: 3px solid #6c3a00;
+}
+
+/* Al pasar el ratón por encima de las pestañas */
+.tab:hover {
+  color: #6c3a00;
+}
+
+span {
+  margin-left: 18px;
+}
+
+/* Estilo para ocultar la scrollbar en navegadores WebKit (Chrome, Safari) */
+tbody {
+  width: 100%;
+  display: block;  /* Cambiar a block para que el scroll funcione bien */
+  max-height: 450px;
+  overflow-y: auto;  /* Permite el scroll */
+  background-color: #e7bf92;
+}
+
+tbody::-webkit-scrollbar {
+  width: 0px; /* Oculta la scrollbar en navegadores WebKit */
+}
+
+/* Estilo para ocultar la scrollbar en Firefox */
+tbody {
+  scrollbar-width: none; /* Oculta la scrollbar en Firefox */
+}
+
+/* Alinear contenido sin que se vea desprolijo */
+td {
+  height: 50px;
+  border-bottom: 1px solid rgb(140, 85, 3);
+  text-align: right;   /* Alinea el texto a la derecha */
+  vertical-align: bottom; /* Alinea el contenido en la parte superior */
+  font-size: 10px;
+  font-style: oblique;
+}
+
+/* Ajustar las celdas para una mejor visualización */
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;  /* Mantiene las celdas del mismo tamaño */
+}
+.toggle-switch {
+  display: inline-block;
+  position: relative;
+  width: 90%;
+  height: 30px;
+}
+
+/* Estilos del "track" (la barra del switch) */
+.toggle-switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e7bf92;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #f5ead6;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Cambia el fondo del switch cuando está activado */
+input:checked + .slider {
+  background-color: rgb(140, 85, 3);
+}
+
+/* Mueve el "thumb" cuando está activado */
+input:checked + .slider:before {
+  transform: translateX(141px);
+}
+
+/* Añade los textos de las dos opciones */
+.toggle-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+#tasks {
+  margin-top: 20px;
+  font-size: larger;
+  width: 100%;
+  height: 60px;
+  background-color: #6c3a00;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#day{
+  display: flex;
+  justify-content: space-between;
+}
+
+.fletxa{
+  width: 30px;
+  height: 30px;
+}
+
+#tasks:hover {
+  background-color: #553000;
+}
+
+#horari{
+  float: right;
+  margin-left: 20px;
+  background-color:rgb(245, 245, 207);
+  width: 210px;
+  padding-left: 20px;
+  margin-right: 20px;
+  border-left: 1px snow rgb(111, 67, 17);
+  padding-bottom: 20px;
+  padding-right: 20px;
+}

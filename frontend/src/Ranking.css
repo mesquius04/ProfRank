@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(250, 230, 200);
+  }
+#title{
+    text-align: center; 
+    font-size: 50px;
+}
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 20px;
+}
+/* Estilo general para el contenedor de filtros */
+/* Contenedor de filtros */
+#filters {
+    margin-left: 120px;
+    display: flex;               /* Usa flexbox para la disposición de los filtros */
+    flex-wrap: wrap;             /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+    gap: 20px;                   /* Espacio entre los elementos */
+    padding: 20px;
+  }
+  
+  /* Estilo para las etiquetas y los menús desplegables */
+  #filters label {
+    font-size: 14px;            /* Tamaño de la fuente para las etiquetas */
+    margin-right: 10px;         /* Espacio a la derecha de las etiquetas */
+    display: flex;              /* Alinea los elementos en línea */
+    align-items: center;        /* Alinea verticalmente los elementos del formulario */
+  }
+  
+  /* Estilo para los selectores */
+  #filters select {
+    padding: 5px;               /* Espaciado interno para los selectores */
+    border: 1px solid #ccc;     /* Borde de los selectores */
+    border-radius: 4px;         /* Bordes redondeados de los selectores */
+    background-color: #fff;     /* Color de fondo de los selectores */
+    font-size: 14px;            /* Tamaño de la fuente dentro de los selectores */
+  }
+  
+  /* Estilo para el botón */
+  #filters button {
+    padding: 10px 20px;         /* Espaciado interno del botón */
+    background-color: rgb(238, 174, 125);  /* Color de fondo del botón */
+    color: black;               /* Color del texto del botón */
+    border: none;               /* Sin borde */
+    border-radius: 4px;         /* Bordes redondeados del botón */
+    cursor: pointer;            /* Cambia el cursor al pasar sobre el botón */
+    font-size: 14px;            /* Tamaño de la fuente dentro del botón */
+  }
+  
+  /* Estilo para el botón cuando se pasa el ratón sobre él */
+  #filters button:hover {
+    background-color: rgb(210, 115, 60);  /* Color de fondo del botón al pasar el ratón */
+  }
+
+  
