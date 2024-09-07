@@ -13,7 +13,7 @@ function Ranking() {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/topusers?criteria=${criteria}&lvl=${level}&region=${region}`);
+      const response = await fetch(`http://localhost:5000/api/topprof?criteria=${criteria}&level=${level}&region=${region}`);
       const data = await response.json();
       setUsers(data.slice(0, 10));
       setLoading(false);

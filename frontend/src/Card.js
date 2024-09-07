@@ -9,7 +9,7 @@ function Card({ user }){
                 <p>Level: {user.lvl}</p>
                 <div id='details'>
                     <p className='a'>Speciality: {user.speciality}</p>
-                    <p className='a'>Location: {user.location}</p>
+                    <p className='a'>Location: {user.city} , {user.country}</p>
                     <p className='a'>Remote: {user.remote ? 'Yes' : 'No'}</p>
                 </div>
             </div>
