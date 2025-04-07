@@ -1,6 +1,5 @@
 import './Card.css';
 function Card({ user }){
-    console.log(user.level);
     return (
         <div id='background'>
             <div id='profileimg'/>
@@ -15,7 +14,7 @@ function Card({ user }){
             </div>
             <div id='score'>
                 <p>Puntuation:</p>
-                <p id='points'>{user.puntuation}</p>
+                <p id='points'>{user.treat}</p>
             </div>
         </div>
     );

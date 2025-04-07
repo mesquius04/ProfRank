@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const createSampleProfessors = require('./seeds/importProfessors');
 const profRoutes = require('./routes/profRoutes');
 const professorAuth = require('./routes/professorAuth');
 const studentAuth = require('./routes/studentAuth');
@@ -17,8 +18,12 @@ app.use(express.json());
 
 // Conectar a MongoDB
 mongoose.connect(process.env.MONGO_URI)
-    .then(() => {
+    .then(async () => {
         console.log('Connected to MongoDB');
+        await createSampleProfessors();
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
     })
     .catch((err) => {
         console.error('Failed to connect to MongoDB', err);
@@ -31,8 +36,4 @@ app.use('/api', profRoutes);
 
 app.get('/', (req, res) => {
     res.send('Hello World');
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
 });
