@@ -12,7 +12,7 @@ const professorSchema = new mongoose.Schema({
     treat: Number,
     city: String,
     country: String,
-    courses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }] // Referencia a cursos que enseña
+    courses: [{ type: mongoose.Schema   .Types.ObjectId, ref: 'Course' }] // Referencia a cursos que enseña
 });
 
 professorSchema.pre('save', async function(next) {
