@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useUser } from './context/UserContext';
 import './MySpace.css';
 
 // Helper para formatear la fecha
@@ -7,6 +8,7 @@ const formatDate = (date) => {
 };
 
 function MySpace() {
+  const { user } = useUser();
   const [currentPage, setCurrentPage] = useState('todo');
   const [tasks, setTasks] = useState([]); // Estado para almacenar las tareas
   const [newTask, setNewTask] = useState({ time: '7h', duration: 1, description: '' });
@@ -54,6 +56,7 @@ function MySpace() {
 
   // Lógica para renderizar el contenido según la pestaña seleccionada
   const renderPage = () => {
+    console.log(user);
     if (currentPage === 'todo') {
       return (
         <div id="todocontent">
@@ -66,7 +69,8 @@ function MySpace() {
                 <p>Duración: {selectedTask.duration} hora(s)</p>
               </div>
             ) : (
-              <p>Haz clic en una tarea para ver los detalles</p>
+              <p>Haz clic en una tarea para ver los detalles {user?.role}</p>
+            
             )}
           </div>
 

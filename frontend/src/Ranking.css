@@ -1,6 +1,9 @@
 body{
     background-color: rgb(250, 230, 200);
   }
+.App{
+  width: 100%;
+}
 #title{
     text-align: center; 
     font-size: 50px;

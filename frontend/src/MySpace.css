@@ -140,7 +140,10 @@ input:checked + .slider:before {
   border: none;
   cursor: pointer;
 }
-
+#details{
+  margin-left: 16px;
+  max-width: 80%;
+}
 #daychange{
   margin-bottom: 4px;
   margin-top: 6px;

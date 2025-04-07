@@ -1,8 +1,11 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const profRoutes = require('./routes/profRoutes');
+const professorAuth = require('./routes/professorAuth');
+const studentAuth = require('./routes/studentAuth');
 
 dotenv.config();
 
@@ -22,10 +25,12 @@ mongoose.connect(process.env.MONGO_URI)
     });
 
 // Rutas básicas
+app.use('/api/students', studentAuth);
+app.use('/api/professors', professorAuth);
 app.use('/api', profRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Hello WWWorld');
+    res.send('Hello World');
 });
 
 app.listen(PORT, () => {
